@@ -1,0 +1,29 @@
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe.config
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.pdb
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csprojResolveAssemblyReference.cache
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\MainWindow.g.cs
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\App.g.cs
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.cache
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.lref
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\MainWindow.baml
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.CoreCompileInputs.cache
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.exe
+C:\Users\Elias\source\repos\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.pdb
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe.config
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.exe
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.pdb
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\bin\Debug\BelleTablePlanning.pdb
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csprojResolveAssemblyReference.cache
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\MainWindow.g.cs
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\App.g.cs
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.cache
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.lref
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\MainWindow.baml
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache
