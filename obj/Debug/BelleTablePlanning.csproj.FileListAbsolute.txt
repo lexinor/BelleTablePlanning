@@ -27,3 +27,17 @@ C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\Bel
 C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
 C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
 C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe.config
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.exe
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.pdb
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\BelleTablePlanning.pdb
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.csprojResolveAssemblyReference.cache
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\MainWindow.g.cs
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\App.g.cs
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.cache
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.lref
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\MainWindow.baml
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache

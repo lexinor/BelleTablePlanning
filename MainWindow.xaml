@@ -5,39 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BelleTablePlanning"
         mc:Ignorable="d"
-        Title="Planning Belle Table" Height="481" Width="691" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Icon="logo.png">
-    <Grid>
-        <Image x:Name="BelleTableLogo" Margin="19,10,543,314" Source="logo.png" Stretch="Fill"/>
-        <Label x:Name="WelcomeLabel" Content="Bienvenue dans l'application de gestion&#xD;&#xA;du planning et des événements."  HorizontalContentAlignment="Center" Margin="163,24,58,0" VerticalAlignment="Top" FontSize="22" FontWeight="ExtraLight"/>
-        <Label x:Name="PleaseConnectLabel" Content="Veuillez-vous connecter." HorizontalContentAlignment="Center" Margin="120,101,70,0" VerticalAlignment="Top"/>
-        <Label x:Name="ConnexionLabel" Content="Connexion" HorizontalAlignment="Left" Margin="456,154,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Black"/>
-        <Label x:Name="InscriptionLabel" Content="Inscription" HorizontalAlignment="Left" Margin="114,141,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Black"/>
-        <Label x:Name="MailLabel" Content="Mail :" HorizontalAlignment="Center" Margin="491,207,147,0" VerticalAlignment="Top" Width="47"/>
-        <TextBox x:Name="MailTextBox" TextAlignment="Center" HorizontalAlignment="Left" Height="18" Margin="414,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
-        <Label x:Name="PasswordLabel" Content="Mot de passe :" HorizontalAlignment="Left" Margin="470,297,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="PasswordTextBox" HorizontalContentAlignment="Center" Margin="414,328,63,0" VerticalAlignment="Top"/>
-        <Button x:Name="ConnectionButton" Content="Connexion" HorizontalAlignment="Left" Margin="446,378,0,0" VerticalAlignment="Top" Width="127" Height="32"/>
-        <Image Margin="329,129,304,0" Source="LigneNoire.png" Stretch="Fill"/>
-        <Label x:Name="NomLabel" Content="Nom :" HorizontalAlignment="Center" Margin="149,182,488,0" VerticalAlignment="Top" Width="48"/>
-        <TextBox x:Name="NomTextBox" HorizontalContentAlignment="Center" Height="18" Margin="84,208,426,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.109"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Label x:Name="PrenomLabel" Content="Prénom :" HorizontalAlignment="Center" Margin="140,235,477,0" VerticalAlignment="Top" Width="68"/>
-        <TextBox x:Name="PrenomTextBox" HorizontalContentAlignment="Center" Height="18" Margin="84,260,426,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Label x:Name="MailLabelInscription" Content="Mail :" HorizontalAlignment="Center" Margin="150,286,488,0" VerticalAlignment="Top" Width="47"/>
-        <TextBox x:Name="MailTextBoxInscription" HorizontalContentAlignment="Center" Height="18" Margin="84,312,426,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <Label x:Name="PasswordLabelInscription" Content="Mot de passe :" HorizontalAlignment="Center" Margin="125,340,460,0" VerticalAlignment="Top" Width="100"/>
-        <PasswordBox HorizontalContentAlignment="Center" Margin="84,366,426,0" VerticalAlignment="Top"/>
-        <Button Content="Inscription" HorizontalAlignment="Left" Margin="105,404,0,0" VerticalAlignment="Top" Width="127"/>
-
-
+        Title="Planning Belle Table" Height="431" Width="405" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFD1D1D1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="125*"/>
+            <RowDefinition Height="277*"/>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False" Margin="0,0,0,40" Background="#FF1F3A83">
+            <Image x:Name="Logo" Width="75" Source="LogoBelleTableClean.PNG" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Center" Height="75"/>
+            <Label x:Name="lbl_Header" Content="Gestion des Planning" Height="76" DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22" Foreground="White"/>
+        </DockPanel>
+        <TextBox x:Name="tb_Identi" HorizontalAlignment="Left" Height="23" Margin="175,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label x:Name="lbl_Identi" Content="Identifiant" HorizontalAlignment="Left" Margin="106,9,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <Label x:Name="lbl_Mp" Content="Mot de passe" HorizontalAlignment="Left" Margin="89,42,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <PasswordBox x:Name="tb_Mp" HorizontalAlignment="Left" Margin="175,45,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Row="1"/>
+        <Button x:Name="btn_Con" Content="Button" HorizontalAlignment="Left" Margin="270,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" BorderBrush="#FF0C00FF" Background="#00707070" Height="25"/>
+        <Label x:Name="lbl_Titre" Content="Connectez-vous" HorizontalAlignment="Center" Margin="125,90,104,5" VerticalAlignment="Center" Height="30" Width="170" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
     </Grid>
 </Window>
