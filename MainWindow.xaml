@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:BelleTablePlanning"
         mc:Ignorable="d"
         Title="Planning Belle Table" Height="431" Width="405" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid Background="#FFD1D1D1">
+    <Grid x:Name="ConnecGrid" Background="#FFD1D1D1">
         <Grid.RowDefinitions>
             <RowDefinition Height="125*"/>
-            <RowDefinition Height="277*"/>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="67*"/>
         </Grid.RowDefinitions>
-        <DockPanel LastChildFill="False" Margin="0,0,0,40" Background="#FF1F3A83">
+        <DockPanel x:Name="Header" LastChildFill="False" Margin="0,0,0,40" Background="#FF1F3A83">
             <Image x:Name="Logo" Width="75" Source="LogoBelleTableClean.PNG" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Center" Height="75"/>
             <Label x:Name="lbl_Header" Content="Gestion des Planning" Height="76" DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="22" Foreground="White"/>
         </DockPanel>
@@ -19,7 +20,9 @@
         <Label x:Name="lbl_Identi" Content="Identifiant" HorizontalAlignment="Left" Margin="106,9,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <Label x:Name="lbl_Mp" Content="Mot de passe" HorizontalAlignment="Left" Margin="89,42,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <PasswordBox x:Name="tb_Mp" HorizontalAlignment="Left" Margin="175,45,0,0" VerticalAlignment="Top" Width="120" Height="23" Grid.Row="1"/>
-        <Button x:Name="btn_Con" Content="Button" HorizontalAlignment="Left" Margin="270,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" BorderBrush="#FF0C00FF" Background="#00707070" Height="25"/>
+        <Button x:Name="btn_Con" Content="Connexion" HorizontalAlignment="Left" Margin="270,83,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" BorderBrush="#FF0A0A0A" Background="#00707070" Height="25" Click="btn_Con_Click"/>
         <Label x:Name="lbl_Titre" Content="Connectez-vous" HorizontalAlignment="Center" Margin="125,90,104,5" VerticalAlignment="Center" Height="30" Width="170" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="18"/>
+        <Button x:Name="btn_Inscrip" Content="Inscrivez-vous" HorizontalAlignment="Center" Margin="108,148,206,37" Grid.Row="1" VerticalAlignment="Center" Width="85" Background="#00707070" Height="25" FontSize="11" BorderBrush="#00707070" BorderThickness="0" Click="btn_Inscrip_Click"/>
+        <Label x:Name="lbl_Inscrip" Content="Pas encore inscrit ?" HorizontalAlignment="Left" Margin="0,144,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
     </Grid>
 </Window>

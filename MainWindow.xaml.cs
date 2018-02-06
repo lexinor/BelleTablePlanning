@@ -25,5 +25,14 @@ namespace BelleTablePlanning
             InitializeComponent();
         }
 
+        private void btn_Con_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Connecté");
+        }
+
+        private void btn_Inscrip_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
