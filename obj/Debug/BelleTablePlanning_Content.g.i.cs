@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logobelletableclean.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ic_arrow_back_black_48dp.png")]
 
 

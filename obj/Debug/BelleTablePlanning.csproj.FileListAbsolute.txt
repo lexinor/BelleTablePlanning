@@ -41,3 +41,7 @@ C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\De
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\MySql.Data.dll
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\MySql.Web.dll
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\MySql.Data.xml
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\MySql.Web.xml
