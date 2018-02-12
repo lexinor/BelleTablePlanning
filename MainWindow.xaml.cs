@@ -71,9 +71,7 @@ namespace BelleTablePlanning
                         ConnexionGrid.Visibility = Visibility.Visible;
                     }
                 }                
-            }
-
-            
+            }            
         }
 
         private void InscriptionClick(object sender, RoutedEventArgs e)
@@ -85,15 +83,19 @@ namespace BelleTablePlanning
 
         private void btn_Connexion_Click(object sender, RoutedEventArgs e)
         {
-            if(tb_Identi.Text == "")
+            if(tb_Identi.Text == "" || tb_Mp.Password.ToString() == "")
             {
                 MessageBox.Show("Veuillez renseigner tous les champs");
             }
             else
             {
-                if(Connexion.CheckCompte(tb_Identi.Text))
+                if(Connexion.CheckCompte(tb_Identi.Text,tb_Mp.Password.ToString()))
                 {
                     MessageBox.Show("Connexion réussie !", "Bienvenue", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Connexion échouée","Impossible de se connecter", MessageBoxButton.OK,MessageBoxImage.Error);
                 }
             }
         }

@@ -28,24 +28,30 @@ namespace BelleTablePlanning
         /// </summary>
         /// <param name="_mail"></param>
         /// <returns></returns>
-        public bool CheckCompte(string _mail)
+        public bool CheckCompte(string _mail, string _mp)
         {
             ConnexionString = "server = " + host + "; user id = " + identi + "; pwd = " + passBd + "; database = belletableplanning";
             MySqlConnection connexion = new MySqlConnection(ConnexionString);
+
+            // On crypte le mot de passe avec la méthode de hash SHA512
+            _mp = GenSHA512Mp(_mp);
+
             try
-            {
-                
+            {                
                 MySqlCommand cmd;
                 connexion.Open(); //Ouverture de la connexion
 
                 cmd = connexion.CreateCommand();
-
-                cmd.CommandText = "SELECT `Mail` FROM `users` WHERE Mail=@mail";
+                
+                cmd.CommandText = "SELECT Mail, Password, Banned FROM `users` WHERE Mail=@mail AND Password =@mp AND Banned=0";
                 cmd.Parameters.AddWithValue("@mail", _mail);
-                cmd.ExecuteScalar();
-
-                connexion.Close(); // Fermeture de la connexion
-                return true;
+                cmd.Parameters.AddWithValue("@mp", _mp);
+                object o = cmd.ExecuteScalar();
+                if(o != null)
+                {
+                    return true;
+                }
+                return false;                
             }
             catch (MySqlException)
             {
@@ -87,7 +93,7 @@ namespace BelleTablePlanning
 
                 return true;
             }
-            catch (Exception)
+            catch (MySqlException)
             {
                 throw;
             }
@@ -107,7 +113,6 @@ namespace BelleTablePlanning
             Byte[] MpCrypted = HashTool.ComputeHash(HashAsByte);
             HashTool.Clear();
             return Convert.ToBase64String(MpCrypted);
-        }
-        
+        }        
     }
 }
