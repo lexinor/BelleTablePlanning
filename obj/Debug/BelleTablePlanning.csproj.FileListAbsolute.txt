@@ -47,3 +47,7 @@ C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\De
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\bin\Debug\MySql.Web.xml
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\Administration.g.cs
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\Administration.baml
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\bin\Debug\MySql.Data.xml
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\bin\Debug\MySql.Web.xml
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\Administration.g.cs
+C:\Users\Alessandro\Documents\Visual Studio 2015\Projects\BelleTablePlanning\BelleTablePlanning\obj\Debug\Administration.baml

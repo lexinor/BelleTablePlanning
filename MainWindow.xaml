@@ -11,7 +11,7 @@
             <Image Name="LogoImg" Source="LogoBelleTableClean.PNG"></Image>
             <Label Name="HeaderLabel" Foreground="White" FontSize="26" VerticalAlignment="Center" Margin="30,0,0,0" >Gestion du planning</Label>
         </DockPanel>
-        <Grid x:Name="ConnexionGrid" Height="275" Panel.ZIndex="2" Visibility="Collapsed">
+        <Grid x:Name="ConnexionGrid" Height="275" Panel.ZIndex="2" Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="340*"/>
                 <ColumnDefinition Width="29*"/>
@@ -29,7 +29,7 @@
             <Button x:Name="btn_Connexion" Margin="230,41,0,0" Background="#FF2A66BD" Foreground="White" Grid.Row="1" Content="Connexion" BorderBrush="#00B47070" IsDefault="True" Click="btn_Connexion_Click" />
             <Button x:Name="btn_NoCompte" Content="Pas encore de compte ? Cliquez ici" HorizontalAlignment="Left" VerticalAlignment="Top" Width="409" Click="InscriptionClick" BorderBrush="#00EAEAEA" Background="#FF2A66BD" Grid.ColumnSpan="2" Foreground="White" BorderThickness="0"/>
         </Grid>
-        <Grid x:Name="InscriptionGrid" Height="275" Panel.ZIndex="1" Visibility="Visible">
+        <Grid x:Name="InscriptionGrid" Height="275" Panel.ZIndex="1" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="350*"/>
                 <ColumnDefinition Width="19*"/>
