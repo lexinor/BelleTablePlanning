@@ -10,6 +10,7 @@
         <DockPanel Name="HeaderPanel" LastChildFill="False" Height="70" VerticalAlignment="Top" Background="#FF2A4FB0" Panel.ZIndex="3">
             <Image Name="LogoImg" Source="LogoBelleTableClean.PNG"></Image>
             <Label Name="HeaderLabel" Foreground="White" FontSize="26" VerticalAlignment="Center" Margin="30,0,0,0" >Gestion du planning</Label>
+            <DockPanel Height="70" LastChildFill="False" VerticalAlignment="Top" Width="100"/>
         </DockPanel>
         <Grid x:Name="ConnexionGrid" Height="275" Panel.ZIndex="2" Visibility="Visible">
             <Grid.ColumnDefinitions>

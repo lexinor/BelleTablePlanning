@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BelleTablePlanning"
         mc:Ignorable="d"
-        Title="Administration" Height="316" Width="513" ResizeMode="NoResize">
+        Title="Administration" Height="441.883" Width="725.12" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="91*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel HorizontalAlignment="Left" Height="83" LastChildFill="False" VerticalAlignment="Top" Width="720" Background="#FF2A4FB0" Grid.ColumnSpan="2">
+            <Image Name="LogoImg" Source="LogoBelleTableClean.PNG"></Image>
+            <Label x:Name="titre" Content="Espace Administration" HorizontalAlignment="Left" Height="41" Margin="175,21,0,0" VerticalAlignment="Top" Width="227" Foreground="white" FontSize="22"/>
+        </DockPanel>
+        <TabControl x:Name="outils" HorizontalAlignment="Left" Height="326" Margin="0,88,0,0" VerticalAlignment="Top" Width="712" Grid.ColumnSpan="2">
+            <TabItem Header="Liste des membres" FontSize="16">
+                <Grid>
+                    <DataGrid x:Name="listemembre" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="512" Margin="10,10,0,0"/>
+                    <StackPanel HorizontalAlignment="Left" Height="261" Margin="540,10,0,0" VerticalAlignment="Top" Width="156">
+                        <Label x:Name="outiluti" Content="Outils" Margin="50,5,0,0" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
+                        <Button x:Name="buttonmdp" Content="Réinitialiser MDP" Margin="0,20,0,0"/>
+
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Historique des connexions" FontSize="16">
+                <Grid Background="white">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45*"/>
+                        <ColumnDefinition Width="308*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
