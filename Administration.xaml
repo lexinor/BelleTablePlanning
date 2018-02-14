@@ -22,6 +22,7 @@
                     <StackPanel HorizontalAlignment="Left" Height="261" Margin="540,10,0,0" VerticalAlignment="Top" Width="156">
                         <Label x:Name="outiluti" Content="Outils" Margin="50,5,0,0" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
                         <Button x:Name="buttonmdp" Content="Réinitialiser MDP" Margin="0,20,0,0"/>
+                        <Button x:Name="btnport" Content="Attribuer portefeuille" Margin="0,60,0,0" Height="55" />
 
                     </StackPanel>
 
@@ -33,6 +34,8 @@
                         <ColumnDefinition Width="45*"/>
                         <ColumnDefinition Width="308*"/>
                     </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="affconnexion" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="261" Margin="10,10,0,0" VerticalAlignment="Top" Width="504"/>
+                    <Button x:Name="btnerror" Content="Erreurs" Grid.Column="1" HorizontalAlignment="Left" Margin="461,108,0,0" VerticalAlignment="Top" Width="122" Height="41"/>
                 </Grid>
             </TabItem>
         </TabControl>
