@@ -70,3 +70,22 @@ C:\Users\pereira1\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanni
 C:\Users\pereira1\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.CoreCompileInputs.cache
 C:\Users\pereira1\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.exe
 C:\Users\pereira1\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.pdb
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.csprojResolveAssemblyReference.cache
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\Administration.g.cs
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\MainWindow.g.cs
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\App.g.cs
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.cache
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning_MarkupCompile.lref
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.exe
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.pdb
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe.config
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\bin\Debug\BelleTablePlanning.exe
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\bin\Debug\BelleTablePlanning.pdb
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\bin\Debug\MySql.Data.xml
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\bin\Debug\MySql.Web.xml
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\Administration.baml
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\MainWindow.baml
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.g.resources
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.Properties.Resources.resources
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.GenerateResource.Cache
+D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\BelleTablePlanning.csproj.CoreCompileInputs.cache
