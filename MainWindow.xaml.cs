@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace BelleTablePlanning
 {
@@ -20,11 +22,14 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class MainWindow : Window
     {
+        // WAMP 
         BddCo Connexion = new BddCo("localhost", "root", "");
+        // Base IK
+        //BddCo Connexion = new BddCo("213.246.49.208", "erngm_ppee4", "D6xjc0?7");
 
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         private void btn_Con_Click(object sender, RoutedEventArgs e)
@@ -63,9 +68,13 @@ namespace BelleTablePlanning
                     mail = tb_Mail.Text;
                     mp = tb_InscrMp.Password.ToString();
                     
-                    if (Connexion.Inscription(nom,prenom, tel, mail,mp))
+                    if (Connexion.Inscription(nom, prenom, mail, tel, "1", mp))
                     {
+                        Connexion.RecupereCompteInscrit(mail); // Requête SQL pour récupérer l'ID du nouvel inscrit
+                        int IDUserInscrit = int.Parse(Application.Current.Properties["IDUserInscrit"].ToString()); // ID récupéré
+                        Connexion.Inscription2(IDUserInscrit, ""); // Création de l'agenda du nouvel inscrit
                         MessageBox.Show("Votre compte à bien été crée !");
+                        Application.Current.Properties.Remove("IDUserInscrit"); // Destruction de la session de l'utilisateur qui vient de s'inscrire au cas-où par sécurité
                         // On cache le formulaire d'inscription et on affiche le formulaire de connexion
                         InscriptionGrid.Visibility = Visibility.Collapsed;
                         ConnexionGrid.Visibility = Visibility.Visible;
@@ -91,7 +100,9 @@ namespace BelleTablePlanning
             {
                 if(Connexion.CheckCompte(tb_Identi.Text,tb_Mp.Password.ToString()))
                 {
-                    MessageBox.Show("Connexion réussie !", "Bienvenue", MessageBoxButton.OK, MessageBoxImage.Information);
+                    this.Hide();
+                    var window = new BelleTablePlanning.Window1();
+                    window.Show();
                 }
                 else
                 {
@@ -100,11 +111,25 @@ namespace BelleTablePlanning
             }
         }
 
+        private void btn_test_click(object sender, RoutedEventArgs e)
+        {
+            tb_Identi.Text = "test@test.com";
+            tb_Mp.Password = "test";
+        }
+
         private void btn_Retour_Click(object sender, RoutedEventArgs e)
         {
             // On cache le formulaire d'inscription et on affiche le formulaire de connexion
             InscriptionGrid.Visibility = Visibility.Collapsed;
             ConnexionGrid.Visibility = Visibility.Visible;
+        }
+
+
+
+        private void MainForm_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            
         }
     }
 }

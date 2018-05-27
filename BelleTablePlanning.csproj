@@ -56,7 +56,53 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConsultationIncidents.xaml.cs">
+      <DependentUpon>ConsultationIncidents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConsulterClients.xaml.cs">
+      <DependentUpon>ConsulterClients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreerClient.xaml.cs">
+      <DependentUpon>CreerClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreerRdv.xaml.cs">
+      <DependentUpon>CreerRdv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EnvoiMsg.xaml.cs">
+      <DependentUpon>EnvoiMsg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Espacecommerciaux.xaml.cs">
+      <DependentUpon>Espacecommerciaux.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Messages.cs" />
+    <Compile Include="Repondre.xaml.cs">
+      <DependentUpon>Repondre.xaml</DependentUpon>
+    </Compile>
     <Page Include="Administration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConsultationIncidents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConsulterClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreerClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreerRdv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EnvoiMsg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Incidents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,12 +118,44 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BddCo.cs" />
+    <Compile Include="Incidents.xaml.cs">
+      <DependentUpon>Incidents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Espacecommerciaux.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Messagerie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanningRdv.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PortefeuilleClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Repondre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messagerie.xaml.cs">
+      <DependentUpon>Messagerie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlanningRdv.xaml.cs">
+      <DependentUpon>PlanningRdv.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PortefeuilleClients.xaml.cs">
+      <DependentUpon>PortefeuilleClients.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
