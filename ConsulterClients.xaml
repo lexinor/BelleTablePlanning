@@ -1,0 +1,20 @@
+﻿<Window x:Class="BelleTablePlanning.ConsulterClients"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BelleTablePlanning"
+        mc:Ignorable="d"
+        Title="Consulter les clients" Height="429" Width="611" Background="#FF2A4FB0" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Width="600" Height="420">
+        <Button x:Name="btn_Retour" Content="" Foreground="White" BorderThickness="0" Click="btn_Retour_Click" Margin="28,27,531,333">
+            <Button.Background>
+                <ImageBrush ImageSource="ic_arrow_back_black_48dp.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Image Name="LogoImg" Source="LogoBelleTableClean.PNG" Margin="501,5,20,308"/>
+        <Label x:Name="titre" Content="Consulter les clients" HorizontalAlignment="Center" Height="38" Margin="202,38,202,0" VerticalAlignment="Top" Width="196" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <DataGrid x:Name="clientsGrid" HorizontalAlignment="Left" Height="230" Margin="19,119,0,0" VerticalAlignment="Top" Width="560" SelectionChanged="DataGrid_SelectionChanged"/>
+
+    </Grid>
+</Window>

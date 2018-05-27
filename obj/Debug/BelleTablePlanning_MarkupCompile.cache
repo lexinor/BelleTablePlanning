@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\obj\Debug\
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanningE4V\BelleTablePlanningE4V\obj\Debug\
 BelleTablePlanning
 none
 false
 DEBUG;TRACE
-D:\Tony PEREIRA\Documents\GitHub\BelleTablePlanning\App.xaml
-2661098568
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanningE4V\BelleTablePlanningE4V\App.xaml
+132056575473
 
-7-1818686888
-151314559481
-Administration.xaml;MainWindow.xaml;
+191719069188
+15-631914777
+Administration.xaml;ConsultationIncidents.xaml;ConsulterClients.xaml;CreerClient.xaml;CreerRdv.xaml;EnvoiMsg.xaml;Incidents.xaml;MainWindow.xaml;Espacecommerciaux.xaml;Messagerie.xaml;PlanningRdv.xaml;PortefeuilleClients.xaml;Repondre.xaml;
 
 False
 
