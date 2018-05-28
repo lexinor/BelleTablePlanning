@@ -131,5 +131,11 @@ namespace BelleTablePlanning
 
             
         }
+
+        private void btn_test2_click(object sender, RoutedEventArgs e)
+        {
+            tb_Identi.Text = "monmail@mail.com";
+            tb_Mp.Password = "test";
+        }
     }
 }

@@ -26,7 +26,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <DatePicker x:Name="dateText" HorizontalAlignment="Left" Margin="473,140,0,0" VerticalAlignment="Top" Width="157" SelectedDateFormat="Long" Focusable="False"/>
+        <DatePicker x:Name="dateText" HorizontalAlignment="Left" Margin="473,140,0,0" VerticalAlignment="Top" Width="157" SelectedDateFormat="Long" Focusable="False" BorderThickness="1"/>
         <Label Content="Plan d'accès :" HorizontalAlignment="Left" Margin="462,267,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16"/>
         <RichTextBox x:Name="planAccesText" HorizontalAlignment="Left" Height="99" Margin="370,296,0,0" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.521,0.457">
             <FlowDocument>

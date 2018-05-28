@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BelleTablePlanning"
         mc:Ignorable="d"
-        Title="Messagerie" Height="411" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Messagerie" Height="411" Width="650" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FF2A4FB0">
     <Grid>
         <DockPanel Height="63" LastChildFill="False" Width="644" Background="#FF2A4FB0" VerticalAlignment="Top">
             <Label x:Name="titre" Content="Messagerie" Height="41" Margin="260,11,0,11" Foreground="white" FontSize="22" Padding="0" RenderTransformOrigin="0.5,0.5" DockPanel.Dock="Bottom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114"/>

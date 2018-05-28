@@ -75,6 +75,7 @@
       <DependentUpon>Espacecommerciaux.xaml</DependentUpon>
     </Compile>
     <Compile Include="Messages.cs" />
+    <Compile Include="Rdv.cs" />
     <Compile Include="Repondre.xaml.cs">
       <DependentUpon>Repondre.xaml</DependentUpon>
     </Compile>

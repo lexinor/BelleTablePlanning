@@ -798,5 +798,108 @@ namespace BelleTablePlanning
             }
         }
 
+
+        //SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv" +
+        //            "FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv" +
+        //            "WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@idUser AND b.Creneau LIKE '2018-05-27'
+
+        public void RecupAllRdv(int _IDUser, List<Rdv> _ListeRdv)
+        {
+            string reqRecupRdv= "SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@IDUser ORDER BY b.Creneau ASC, i.Nom ASC";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+                MySqlCommand cmdRecupRdv = new MySqlCommand(reqRecupRdv, connexion);
+
+                cmdRecupRdv.Parameters.AddWithValue("@IDUser", _IDUser);
+
+                MySqlDataReader reader = cmdRecupRdv.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string _Nom = reader[0].ToString();
+                        string _Prenom = reader[1].ToString();
+                        string _Mail = reader[2].ToString();
+                        string _Adresse = reader[3].ToString();
+                        string _Tel = reader[4].ToString();
+                        string _Date = reader[5].ToString();
+                        string _LblRdv = reader[6].ToString();
+                        string _Descri = reader[7].ToString();
+                        string _Plan = reader[8].ToString();
+                        string _Type = reader[9].ToString();
+
+                        Rdv rdv = new Rdv(_Nom, _Prenom, _Mail, _Adresse, _Tel, _Date, _LblRdv, _Descri, _Plan, _Type);
+                        _ListeRdv.Add(rdv);
+                    }
+                }                
+            }
+            catch (Exception e)
+            {                
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+
+        }
+
+        public void RecupRdvFiltre(string _Filtre, int _IDUser, List<Rdv> _ListeRdv)
+        {
+            string reqRecupRdv = "SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@IDUser AND b.Creneau LIKE @Date";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+                MySqlCommand cmdRecupRdv = new MySqlCommand(reqRecupRdv, connexion);
+
+                cmdRecupRdv.Parameters.AddWithValue("@IDUser", _IDUser);
+                cmdRecupRdv.Parameters.AddWithValue("@Date", _Filtre);
+
+                MySqlDataReader reader = cmdRecupRdv.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string _Nom = reader[0].ToString();
+                        string _Prenom = reader[1].ToString();
+                        string _Mail = reader[2].ToString();
+                        string _Adresse = reader[3].ToString();
+                        string _Tel = reader[4].ToString();
+                        string _Date = reader[5].ToString();
+                        string _LblRdv = reader[6].ToString();
+                        string _Descri = reader[7].ToString();
+                        string _Plan = reader[8].ToString();
+                        string _Type = reader[9].ToString();
+
+                        Rdv rdv = new Rdv(_Nom, _Prenom, _Mail, _Adresse, _Tel, _Date, _LblRdv, _Descri, _Plan, _Type);
+                        _ListeRdv.Add(rdv);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+
+        }
+
+
     }
 }

@@ -29,7 +29,8 @@
             <Border BorderBrush="Black" BorderThickness="0" Height="30" Grid.Row="2" Grid.ColumnSpan="2" Background="#FF2A4FB0" VerticalAlignment="Bottom"/>
             <Button x:Name="btn_Connexion" Margin="230,41,0,0" Background="#FF2A66BD" Foreground="White" Grid.Row="1" Content="Connexion" BorderBrush="#00B47070" IsDefault="True" Click="btn_Connexion_Click" />
             <Button x:Name="btn_NoCompte" Content="Pas encore de compte ? Cliquez ici" HorizontalAlignment="Left" VerticalAlignment="Top" Width="409" Click="InscriptionClick" BorderBrush="#00EAEAEA" Background="#FF2A66BD" Grid.ColumnSpan="2" Foreground="White" BorderThickness="0"/>
-            <Button x:Name="btn_test" Margin="23,41,282,0" Background="#FF2A66BD" Foreground="White" Grid.Row="1" Content="Test Login" BorderBrush="#00B47070" IsDefault="True" Height="34" VerticalAlignment="Top" Click="btn_test_click" />
+            <Button x:Name="btn_test" Margin="21,19,284,0" Background="#FF2A66BD" Foreground="White" Grid.Row="2" Content="Test Login" BorderBrush="#00B47070" Height="25" VerticalAlignment="Top" Click="btn_test_click" />
+            <Button x:Name="btn_test2" Margin="98,20,207,0" Background="#FF2A66BD" Foreground="White" Grid.Row="2" Content="Test Admin" BorderBrush="#00B47070" Height="25" VerticalAlignment="Top" Click="btn_test2_click" RenderTransformOrigin="0.444,0.64" />
         </Grid>
         <Grid x:Name="InscriptionGrid" Height="275" Panel.ZIndex="1" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
