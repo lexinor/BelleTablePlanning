@@ -10,15 +10,18 @@ using System.Windows.Controls;
 
 namespace BelleTablePlanning
 {
+    /// <summary>
+    /// Cette classe regroupe tous les appels fait pour la base de données
+    /// </summary>
     public class BddCo
     {
         private string host;
         private string identi;
         private string passBd;
         private string ConnexionString;
-        
-        public BddCo(string _hst, string _idu,string _psBd)
-        {            
+
+        public BddCo(string _hst, string _idu, string _psBd)
+        {
             host = _hst;
             identi = _idu;
             passBd = _psBd;
@@ -38,7 +41,7 @@ namespace BelleTablePlanning
         /// <returns></returns>
         public bool CheckCompte(string _mail, string _mp)
         {
-            
+
             MySqlConnection connexion = new MySqlConnection(CreateConString());
 
             // On crypte le mot de passe avec la méthode de hash SHA512
@@ -51,12 +54,12 @@ namespace BelleTablePlanning
             int _IDType;
 
             try
-            {                 
+            {
                 MySqlCommand cmd;
                 connexion.Open(); //Ouverture de la connexion
 
                 cmd = connexion.CreateCommand();
-                
+
                 cmd.CommandText = "SELECT * FROM `users` WHERE Mail=@mail AND Password =@mp AND Banned=0";
                 cmd.Parameters.AddWithValue("@mail", _mail);
                 cmd.Parameters.AddWithValue("@mp", _mp);
@@ -90,16 +93,16 @@ namespace BelleTablePlanning
                 {
                     return true;
                 }
-                return false;                
+                return false;
             }
             catch (MySqlException)
             {
                 return false;
-                throw;                
+                throw;
             }
             finally
             {
-                if(connexion.State == ConnectionState.Open)
+                if (connexion.State == ConnectionState.Open)
                 {
                     connexion.Close(); // Fermeture de la connexion
                 }
@@ -115,7 +118,7 @@ namespace BelleTablePlanning
             _mpU = GenSHA512Mp(_mpU);
 
             try
-            {                
+            {
                 MySqlCommand cmd;
                 connexion.Open(); //Ouverture de la connexion
 
@@ -242,7 +245,7 @@ namespace BelleTablePlanning
 
                 cmd = connexion.CreateCommand();
                 cmd.CommandText = "INSERT INTO `incidents` (`Objet`, `Message`, `Type`, `DateAjout`, `Auteur`, `Resolu`) VALUES (@_objet,@_message,@_type,@_dateAjout,@_auteur,@_resolu)";
-                
+
                 cmd.Parameters.AddWithValue("@_objet", _objet);
                 cmd.Parameters.AddWithValue("@_message", _message);
                 cmd.Parameters.AddWithValue("@_type", _type);
@@ -314,7 +317,7 @@ namespace BelleTablePlanning
 
         public void RemplirLeComboBox(ComboBox LeComboBox, string requeteSql, string Colonne)
         {
-            
+
             MySqlConnection connection = new MySqlConnection(CreateConString());
             connection.Open();
             MySqlCommand cmdSel = new MySqlCommand(requeteSql, connection);
@@ -645,7 +648,7 @@ namespace BelleTablePlanning
         public bool EnvoyerMessage(string objet, string msg, string desti)
         {
             string reqSendMsg = "INSERT INTO `messages`(`objet_msg`, `contenu_msg`, `id_emet`, `id_dest`, `date_envoi`) VALUES (@objet,@msg,@IdEmet,@IdDesti,now())";
-            
+
             MySqlConnection connexion = new MySqlConnection(CreateConString());
 
             try
@@ -680,7 +683,7 @@ namespace BelleTablePlanning
         public string RecupIdDesti(string mail)
         {
             string reqSendMsg = "SELECT IDUser FROM users WHERE Mail=@Mail";
-            
+
             MySqlConnection connexion = new MySqlConnection(CreateConString());
 
             try
@@ -742,7 +745,7 @@ namespace BelleTablePlanning
                         string emet = RecupMailFromId(reader[4].ToString());
                         string desti = idUser;
 
-                        Messages Message = new Messages(idMsg,objet,msg,desti,emet,date);
+                        Messages Message = new Messages(idMsg, objet, msg, desti, emet, date);
                         ListeMessages.Add(Message);
                     }
                     return ListeMessages;
@@ -799,13 +802,11 @@ namespace BelleTablePlanning
         }
 
 
-        //SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv" +
-        //            "FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv" +
-        //            "WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@idUser AND b.Creneau LIKE '2018-05-27'
+
 
         public void RecupAllRdv(int _IDUser, List<Rdv> _ListeRdv)
         {
-            string reqRecupRdv= "SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@IDUser ORDER BY b.Creneau ASC, i.Nom ASC";
+            string reqRecupRdv = "SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@IDUser ORDER BY b.Creneau ASC, i.Nom ASC";
 
             MySqlConnection connexion = new MySqlConnection(CreateConString());
 
@@ -835,10 +836,10 @@ namespace BelleTablePlanning
                         Rdv rdv = new Rdv(_Nom, _Prenom, _Mail, _Adresse, _Tel, _Date, _LblRdv, _Descri, _Plan, _Type);
                         _ListeRdv.Add(rdv);
                     }
-                }                
+                }
             }
             catch (Exception e)
-            {                
+            {
                 throw e;
             }
             finally
@@ -903,6 +904,199 @@ namespace BelleTablePlanning
 
         }
 
+        public void RecupListeClients(List<Clients> _listeC)
+        {
+            _listeC.Clear();
 
+            string reqRecupClients = "SELECT i.Nom, i.Prenom, i.Mail, i.Phone, i.Adresse, s.Libelle FROM interlocuteurs as i, structures as s WHERE i.IDStructure=s.IDStructure GROUP BY i.Nom ASC";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+                MySqlCommand cmdRecupRdv = new MySqlCommand(reqRecupClients, connexion);
+
+                MySqlDataReader reader = cmdRecupRdv.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string nom = reader[0].ToString();
+                        string prenom = reader[1].ToString();
+                        string mail = reader[2].ToString();
+                        string tel = reader[3].ToString();
+                        string adresse = reader[4].ToString();
+                        string typeC = reader[5].ToString();
+
+                        Clients Client = new Clients(nom, prenom, mail, tel, adresse, typeC);
+                        _listeC.Add(Client);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+        }
+
+        public void RecupUsers(List<Users> _listeU)
+        {
+            _listeU.Clear();
+
+            string reqRecupU = "SELECT i.Nom, i.Prenom, i.Mail, i.Phone, s.Libelle FROM interlocuteurs as i, structures as s WHERE i.IDStructure=s.IDStructure GROUP BY i.nom";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+                MySqlCommand cmdRecupUsers = new MySqlCommand(reqRecupU, connexion);
+
+                MySqlDataReader reader = cmdRecupUsers.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string nom = reader[0].ToString();
+                        string prenom = reader[1].ToString();
+                        string mail = reader[2].ToString();
+                        string tel = reader[3].ToString();
+
+                        Users User = new Users(nom, prenom, mail, tel);
+                        _listeU.Add(User);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+        }
+
+        public void RecupAllIncidents(List<Incident> _listeI)
+        {
+            _listeI.Clear();
+
+            string reqRecupIncident = "SELECT i.Objet, i.Message, i.Type, i.DateAjout, users.Nom, users.Prenom, i.Resolu, i.IDIncident FROM incidents as i, users WHERE i.Auteur=users.IDUser ORDER BY i.Resolu DESC";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+                MySqlCommand cmdRecupIncidents = new MySqlCommand(reqRecupIncident, connexion);
+
+                MySqlDataReader reader = cmdRecupIncidents.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        string objet = reader[0].ToString();
+                        string msg = reader[1].ToString();
+                        string typeI = reader[2].ToString();
+                        string date = reader[3].ToString();
+                        string auteur = reader[4].ToString() + " " + reader[5].ToString();
+                        string statut = reader[6].ToString();
+                        string idIncident = reader[7].ToString();
+
+                        // On modifie la valeur du type d'incident par une chaîne compréhensible
+                        switch (typeI)
+                        {
+                            case "1":
+                                typeI = "Normal";
+                                break;
+                            case "2":
+                                typeI = "Urgent";
+                                break;
+                            case "3":
+                                typeI = "Critique";
+                                break;
+                            default:
+                                typeI = "Aucun";
+                                break;
+                        }
+
+                        // On modifie la valeur de Résolu par une chaîne compréhensible
+                        switch (statut)
+                        {
+                            case "0":
+                                statut = "Non-Résolu";
+                                break;
+                            case "1":
+                                statut = "Résolu";
+                                break;
+                            default:
+                                statut = "Aucun";
+                                break;
+                        }
+
+                        Incident _Incident = new Incident(objet, msg, typeI, date, auteur, statut, idIncident);
+                        _listeI.Add(_Incident);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+        }
+
+        public bool IsResolu(Incident _Incident)
+        {
+            string reqUpdateStatut = "UPDATE incidents SET Resolu=1 WHERE IDIncident=@IdIncident";
+
+            MySqlConnection connexion = new MySqlConnection(CreateConString());
+
+            try
+            {
+                connexion.Open();
+
+                MySqlCommand cmdRecupIncidents = new MySqlCommand(reqUpdateStatut, connexion);
+
+                cmdRecupIncidents.Parameters.AddWithValue("@IdIncident", _Incident.idIncident);
+
+                int ligneAffec = cmdRecupIncidents.ExecuteNonQuery();
+
+                if (ligneAffec == 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (connexion.State == ConnectionState.Open)
+                {
+                    connexion.Close();
+                }
+            }
+        }
     }
+        
 }

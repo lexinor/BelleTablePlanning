@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BelleTablePlanning"
         mc:Ignorable="d"
-        Title="Administration" Height="441.883" Width="725.12" ResizeMode="NoResize"
-        WindowStartupLocation="CenterScreen">
+        Title="Administration" Height="490.97" Width="893" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF2A4FB0">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="163*"/>
-            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="685*"/>
+            <ColumnDefinition Width="202*"/>
         </Grid.ColumnDefinitions>
-        <DockPanel HorizontalAlignment="Left" Height="83" LastChildFill="False" VerticalAlignment="Top" Width="720" Background="#FF2A4FB0" Grid.ColumnSpan="2">
+        <DockPanel HorizontalAlignment="Left" Height="83" LastChildFill="False" VerticalAlignment="Top" Width="887" Background="#FF2A4FB0" Grid.ColumnSpan="2">
             <Button x:Name="btn_Retour" Content="" Foreground="White" BorderThickness="0" Click="btn_Retour_Click" Width="70">
                 <Button.Background>
                     <ImageBrush ImageSource="ic_arrow_back_black_48dp.png" Stretch="UniformToFill"/>
@@ -20,45 +19,62 @@
             </Button>
             <Label x:Name="titre" Content="Espace Administration" HorizontalAlignment="Left" Height="41" Margin="175,21,0,0" VerticalAlignment="Top" Width="227" Foreground="white" FontSize="22"/>
         </DockPanel>
-        <TabControl x:Name="outils" HorizontalAlignment="Left" Height="326" Margin="0,88,0,0" VerticalAlignment="Top" Width="712" Grid.ColumnSpan="2">
+        <TabControl x:Name="outils" HorizontalAlignment="Left" Height="363" Margin="10,77,0,0" VerticalAlignment="Top" Width="855" Grid.ColumnSpan="2" Focusable="False" >
             <TabItem Header="Liste des membres" FontSize="16">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="117*"/>
-                        <ColumnDefinition Width="589*"/>
+                        <ColumnDefinition Width="141*"/>
+                        <ColumnDefinition Width="71*"/>
+                        <ColumnDefinition Width="637*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="listemembre" HorizontalAlignment="Left" Height="261" VerticalAlignment="Top" Width="512" Margin="10,10,0,0" Grid.ColumnSpan="2"/>
-                    <StackPanel HorizontalAlignment="Left" Height="261" Margin="423,10,0,0" VerticalAlignment="Top" Width="156" Grid.Column="1">
+                    <DataGrid x:Name="listeMembre" HorizontalAlignment="Left" Height="310" VerticalAlignment="Top" Width="652" Margin="10,10,0,0" Grid.ColumnSpan="3" Focusable="False" CanUserReorderColumns="False" CanUserSortColumns="False" IsManipulationEnabled="True" SelectionMode="Single" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Nom" Width="auto" Binding="{Binding nomU}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Prénom" Width="auto" Binding="{Binding prenomU}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Téléphone" Width="auto" Binding="{Binding telU}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Mail" Width="*" Binding="{Binding mailU}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel HorizontalAlignment="Left" Height="261" Margin="471,10,0,0" VerticalAlignment="Top" Width="156" Grid.Column="2">
                         <Label x:Name="outiluti" Content="Outils" Margin="50,5,0,0" FontWeight="Bold" FontFamily="Segoe UI Semibold"/>
-                        <Button x:Name="buttonmdp" Content="Réinitialiser MDP" Margin="0,20,0,0"/>
-                        <Button x:Name="btnport" Content="Attribuer portefeuille" Margin="0,60,0,0" Height="55" />
+                        <Button x:Name="buttonmdp" Content="Réinitialiser MDP" Margin="0,20,0,0" Height="45" Background="#FF2A66BD" Foreground="White" Grid.Row="1" BorderBrush="#00B47070"/>
+                        <Button x:Name="btnport" Content="Attribuer portefeuille" Margin="0,60,0,0" Height="45" Background="#FF2A66BD" Foreground="White" Grid.Row="1" BorderBrush="#00B47070"/>
 
                     </StackPanel>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Historique des connexions" FontSize="16">
+            <TabItem Header="Historique des connexions" FontSize="16" >
                 <Grid Background="white">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="45*"/>
                         <ColumnDefinition Width="308*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="affconnexion" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="261" Margin="10,10,0,0" VerticalAlignment="Top" Width="504"/>
-                    <Button x:Name="btnerror" Content="Erreurs" Grid.Column="1" HorizontalAlignment="Left" Margin="461,108,0,0" VerticalAlignment="Top" Width="122" Height="41"/>
+                    <DataGrid x:Name="affconnexion" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="310" Margin="10,10,0,0" VerticalAlignment="Top" Width="702" IsReadOnly="True"/>
+                    <Button x:Name="btnerror" Content="Erreurs" Grid.Column="1" HorizontalAlignment="Left" Margin="609,10,0,0" VerticalAlignment="Top" Width="122" Height="41"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Incidents" FontSize="16">
+            <TabItem Name="tabIncident" Header="Incidents" FontSize="16">
                 <Grid Background="white">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="45*"/>
                         <ColumnDefinition Width="308*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="affincidents" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="261" Margin="10,10,0,0" VerticalAlignment="Top" Width="504" SelectionChanged="affincidents_SelectionChanged"/>
-                    <Button x:Name="btnResolu" Content="Résolu" Grid.Column="1" HorizontalAlignment="Left" Margin="461,145,0,0" VerticalAlignment="Top" Width="122" Height="41"/>
+                    <DataGrid x:Name="incidentsGrid" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="310" Margin="10,10,0,0" Width="687" VerticalAlignment="Top" Focusable="False" CanUserReorderColumns="False" CanUserSortColumns="False" IsManipulationEnabled="True" SelectionMode="Single" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Statut" Binding="{Binding statut}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Type" Binding="{Binding typeIncident}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Objet" Binding="{Binding objet}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Date" Binding="{Binding date}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Auteur" Binding="{Binding auteur}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Message" Binding="{Binding msg}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnResolu" Content="Résolu" Grid.Column="1" HorizontalAlignment="Left" Margin="609,38,0,0" VerticalAlignment="Top" Width="122" Height="45" Background="#FF2A66BD" Foreground="White" Grid.Row="1" BorderBrush="#00B47070" Click="btnResolu_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Image Name="LogoImg" Source="LogoBelleTableClean.PNG" Margin="160,-2,-3,327" Grid.Column="1" />
+        <Image Name="LogoImg" Source="LogoBelleTableClean.PNG" Margin="0,0,22,0" Grid.Column="1" HorizontalAlignment="Right" Width="101" Height="88" VerticalAlignment="Top" />
     </Grid>
 
 </Window>

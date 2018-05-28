@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Planning des rendez-vous" Height="421" Width="718" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF2A4FB0">
     <Grid Margin="0,0,4,-1">
-        <DataGrid x:Name="planningGrid" HorizontalAlignment="Center" Margin="10,145,10,0" Width="688" Height="225" VerticalAlignment="Top" Focusable="False" CanUserSortColumns="False" CanUserResizeColumns="False" 
+        <DataGrid x:Name="planningGrid" HorizontalAlignment="Center" Margin="10,145,10,0" Width="688" Height="225" VerticalAlignment="Top" Focusable="False" CanUserSortColumns="False" 
                   CanUserReorderColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" IsManipulationEnabled="True" 
                   ItemsSource="{Binding Path=Rdv}" SelectedItem="{Binding Path=SelectedRdv, Mode=TwoWay}">
             <DataGrid.Columns>

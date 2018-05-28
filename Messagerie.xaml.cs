@@ -22,8 +22,7 @@ namespace BelleTablePlanning
     {
         // WAMP 
         BddCo Bdd = new BddCo("localhost", "root", "");
-        // Base IK
-        //BddCo Connexion = new BddCo("213.246.49.208", "erngm_ppee4", "D6xjc0?7");
+        
         string idUser = Application.Current.Properties["IDUser"].ToString();
 
         public Messagerie()

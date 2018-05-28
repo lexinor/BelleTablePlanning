@@ -11,7 +11,7 @@
             <Label x:Name="titre" Content="Messagerie" Height="41" Margin="260,11,0,11" Foreground="white" FontSize="22" Padding="0" RenderTransformOrigin="0.5,0.5" DockPanel.Dock="Bottom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="114"/>
         </DockPanel>
         <Button x:Name="sendMsg" Content="Envoyez un message" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="119" Height="23" Click="button_Click"/>
-        <DataGrid x:Name="msgGrid" Margin="10,105,10,10" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" SelectionMode="Single" CanUserResizeRows="False" IsReadOnly="True">
+        <DataGrid x:Name="msgGrid" Margin="10,105,10,10" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserReorderColumns="False" SelectionMode="Single" CanUserResizeRows="False" IsReadOnly="True" Focusable="False">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                 </Style>
@@ -24,7 +24,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="lireMsg_btn" Content="Ouvrir le message" Margin="515,77,0,0" VerticalAlignment="Top" Height="23" Click="lireMsg_btn_Click" MouseEnter="lireMsg_btn_MouseEnter" HorizontalAlignment="Left" Width="119"/>
-        <Button x:Name="repMsg_btn" Content="Répondre" HorizontalAlignment="Left" Margin="134,77,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="repMsg_btn_Click"/>
+        <Button x:Name="repMsg_btn" Content="Répondre" HorizontalAlignment="Left" Margin="145,77,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="repMsg_btn_Click"/>
         <Image x:Name="LogoImg" Source="LogoBelleTableClean.PNG" Margin="554,-2,0,317" />
 
     </Grid>

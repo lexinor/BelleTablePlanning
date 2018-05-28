@@ -28,9 +28,6 @@ namespace BelleTablePlanning
         {
             InitializeComponent();
             RemplirListeRdv();
-            
-            // string planningSql = "SELECT * FROM rdv, qualifier, bloquer WHERE rdv.IDRdv = qualifier.IDRdv AND qualifier.IDRdv = bloquer.IDRdv AND IDUser = " + IDUser;
-            //Bdd.RemplirLeGrid(planningGrid, planningSql);            
         }
 
         private void RemplirListeRdv()
