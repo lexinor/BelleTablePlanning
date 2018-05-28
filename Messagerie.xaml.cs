@@ -20,10 +20,15 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class Messagerie : Window
     {
-        // WAMP 
-        BddCo Bdd = new BddCo("localhost", "root", "");
-        // Base IK
-        //BddCo Connexion = new BddCo("213.246.49.208", "erngm_ppee4", "D6xjc0?7");
+        // Base de test local
+        //BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Serveur CFA
+        // BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Autre serveur
+        BddCo Bdd = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
+
         string idUser = Application.Current.Properties["IDUser"].ToString();
 
         public Messagerie()

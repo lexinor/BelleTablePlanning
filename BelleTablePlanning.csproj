@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Clients.cs" />
     <Compile Include="ConsultationIncidents.xaml.cs">
       <DependentUpon>ConsultationIncidents.xaml</DependentUpon>
     </Compile>
@@ -74,10 +75,16 @@
     <Compile Include="Espacecommerciaux.xaml.cs">
       <DependentUpon>Espacecommerciaux.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Incident.cs" />
     <Compile Include="Messages.cs" />
+    <Compile Include="Rdv.cs" />
+    <Compile Include="RdvDetails.xaml.cs">
+      <DependentUpon>RdvDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repondre.xaml.cs">
       <DependentUpon>Repondre.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs" />
     <Page Include="Administration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PortefeuilleClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RdvDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

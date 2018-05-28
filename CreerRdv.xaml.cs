@@ -20,13 +20,13 @@ namespace BelleTablePlanning
     public partial class CreerRdv : Window
     {
         // Base de test local
-        BddCo Bdd = new BddCo("localhost", "root", "");
+        //BddCo Bdd = new BddCo("localhost", "root", "");
 
         // Serveur CFA
         // BddCo Bdd = new BddCo("localhost", "root", "");
 
         // Autre serveur
-        // BddCo Bdd = new BddCo("localhost", "root", "");
+        BddCo Bdd = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
 
         public CreerRdv()
         {

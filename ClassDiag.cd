@@ -3,7 +3,7 @@
   <Class Name="BelleTablePlanning.BddCo">
     <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABBEAAAAAAgAAQAQEAgAEEAIARAAAAAAAAhIQAgcCJA=</HashCode>
+      <HashCode>ABBEgAAAAAgQAQAREAgAEEAIARAAAAAAAAhIAAgcCJA=</HashCode>
       <FileName>BddCo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -12,6 +12,34 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAABAAAAAgAAAAAAAAIAAQAAAAAAAI=</HashCode>
       <FileName>Messages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BelleTablePlanning.Rdv">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAIQIQAAAAAAAQAAAAAAAIAAACAAAAAAAAAAEAAgA=</HashCode>
+      <FileName>Rdv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BelleTablePlanning.Clients">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAIAAAAAAAIABAAAAgAAAAAAE=</HashCode>
+      <FileName>Clients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BelleTablePlanning.Users">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAQAAAAAAAABCAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BelleTablePlanning.Incident">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAQAAQAQAAA=</HashCode>
+      <FileName>Incident.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

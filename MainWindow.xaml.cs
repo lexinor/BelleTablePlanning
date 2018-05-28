@@ -22,10 +22,15 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class MainWindow : Window
     {
-        // WAMP 
-        BddCo Connexion = new BddCo("localhost", "root", "");
-        // Base IK
-        //BddCo Connexion = new BddCo("213.246.49.208", "erngm_ppee4", "D6xjc0?7");
+        // Base de test local
+        //BddCo Connexion = new BddCo("localhost", "root", "");
+
+        // Serveur CFA
+        // BddCo Connexion = new BddCo("localhost", "root", "");
+
+        // Autre serveur
+        BddCo Connexion = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
+
 
         public MainWindow()
         {
@@ -130,6 +135,12 @@ namespace BelleTablePlanning
         {
 
             
+        }
+
+        private void btn_test2_click(object sender, RoutedEventArgs e)
+        {
+            tb_Identi.Text = "monmail@mail.com";
+            tb_Mp.Password = "test";
         }
     }
 }

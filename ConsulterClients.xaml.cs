@@ -19,12 +19,20 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class ConsulterClients : Window
     {
-        BddCo Bdd = new BddCo("localhost", "root", "");
+        // Base de test local
+        //BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Serveur CFA
+        // BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Autre serveur
+        BddCo Bdd = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
+
         public ConsulterClients()
         {
             InitializeComponent();
-            string requeteClients = "SELECT * FROM interlocuteurs ORDER BY IDInterlocuteur";
-            Bdd.RemplirLeGrid(clientsGrid, requeteClients);
+
+            RecupListe();
         }
 
         private void btn_Retour_Click(object sender, RoutedEventArgs e)
@@ -32,11 +40,25 @@ namespace BelleTablePlanning
             this.Close();
             var window = new BelleTablePlanning.PortefeuilleClients();
             window.Show();
-        }
-
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        }    
+        
+        private void RecupListe()
         {
+            // On vide la grid pour éviter les doublons lors de l'ajout des clients
+            clientsGrid.Items.Clear();
 
-        }
+            // On instancie une liste de Clients
+            List<Clients> listeClients = new List<Clients>();
+
+            // On récupère la liste des clients
+            Bdd.RecupListeClients(listeClients);
+
+            // On ajoute chaque clients de la liste dans la grid
+            foreach (Clients client in listeClients)
+            {
+                clientsGrid.Items.Add(client);
+            }
+
+        }    
     }
 }

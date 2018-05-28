@@ -21,19 +21,27 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class Administration : Window
     {
-        BddCo Bdd = new BddCo("localhost", "root", "");
+        // Base de test local
+        //BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Serveur CFA
+        // BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Autre serveur
+        BddCo Bdd = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
+
         public Administration()
         {
             InitializeComponent();
-            string requeteIncidents = "SELECT * FROM incidents ORDER BY IDIncident";
-            Bdd.RemplirLeGrid(affincidents, requeteIncidents);
-            string requeteUtilisateurs = "SELECT * FROM users ORDER BY IDUser";
-            Bdd.RemplirLeGrid(listemembre, requeteUtilisateurs);
+
+            RecupListeUsers();
+
+            RecupListeIncidents();
         }
 
         private void btnport_Click()
         {
-
+            
         }
 
         private void btn_Retour_Click(object sender, RoutedEventArgs e)
@@ -43,37 +51,57 @@ namespace BelleTablePlanning
             window.Show();
         }
 
-        public static DataTable SelectData(string sCommand)
+        private void RecupListeUsers()
         {
-            DataTable dtData = null;
-            try
+            // On vide la Grid pour eviter les doublons
+            listeMembre.Items.Clear();
+
+            // On instancie une liste pour y mettre les utilisateurs récupérés
+            List<Users> listeUsers = new List<Users>();
+
+            // On récupère tous utilisateurs et on les ajoute dans la liste
+            Bdd.RecupUsers(listeUsers);
+
+            // On ajoute chaque utilisateurs contenus dans la liste dans la Grid
+            foreach (Users user in listeUsers)
             {
-                dtData = new DataTable();
-                string ConnexionString = "server = 127.0.0.1; user id = root; pwd = ; database = belletableplanning";
-                using (MySqlConnection connection = new MySqlConnection(ConnexionString))
-                {
-                    using (MySqlDataAdapter da = new MySqlDataAdapter(sCommand, connection))
-                    {
-                        connection.Open();
-                        da.Fill(dtData);
-                    }
-                }
+                listeMembre.Items.Add(user);
             }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return dtData;
+            listeMembre.Items.Refresh();
         }
 
-        DataTable dtData = SelectData("SELECT * FROM incidents");
-        //affincidents.DataSource = dtData;
-
-        
-
-        private void affincidents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void RecupListeIncidents()
         {
+            // On vide la Grid pour eviter les doublons
+            incidentsGrid.Items.Clear();
 
+            // On instancie une liste pour y mettre les utilisateurs récupérés
+            List<Incident> listeIncidents = new List<Incident>();
+
+            // On récupère tous utilisateurs et on les ajoute dans la liste
+            Bdd.RecupAllIncidents(listeIncidents);
+
+            // On ajoute chaque utilisateurs contenus dans la liste dans la Grid
+            foreach (Incident incident in listeIncidents)
+            {
+                incidentsGrid.Items.Add(incident);
+            }
+            incidentsGrid.Items.Refresh();
+        }
+
+        private void btnResolu_Click(object sender, RoutedEventArgs e)
+        {
+            if (incidentsGrid.SelectedIndex > -1)
+            {
+                Incident incident = (Incident)incidentsGrid.SelectedItem;
+                if (Bdd.IsResolu(incident))
+                {
+                    incidentsGrid.Items.Clear();
+                    RecupListeIncidents();
+                    MessageBox.Show("Incident Résolu !");
+
+                }
+            }
         }
     }
 }
