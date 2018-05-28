@@ -7,15 +7,17 @@
         mc:Ignorable="d"
         Title="Planning des rendez-vous" Height="421" Width="718" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF2A4FB0">
     <Grid Margin="0,0,4,-1">
-        <DataGrid x:Name="planningGrid" HorizontalAlignment="Center" Margin="10,159,10,0" Width="688" Height="211" VerticalAlignment="Top" Focusable="False" CanUserSortColumns="False" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" IsManipulationEnabled="True">
+        <DataGrid x:Name="planningGrid" HorizontalAlignment="Center" Margin="10,145,10,0" Width="688" Height="225" VerticalAlignment="Top" Focusable="False" CanUserSortColumns="False" CanUserResizeColumns="False" 
+                  CanUserReorderColumns="False" CanUserResizeRows="False" SelectionMode="Single" IsReadOnly="True" IsManipulationEnabled="True" 
+                  ItemsSource="{Binding Path=Rdv}" SelectedItem="{Binding Path=SelectedRdv, Mode=TwoWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nom" Binding="{Binding nomClient}" Width="auto" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Prénom" Binding="{Binding prenomClient}" Width="auto" ></DataGridTextColumn>
                 <!--<DataGridTextColumn Header="Mail" Binding="{Binding mailClient}" Width="auto" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Adresse" Binding="{Binding adrClient}" Width="auto" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Téléphone" Binding="{Binding telClient}" Width="auto" ></DataGridTextColumn> -->
-                <DataGridTextColumn Header="Horaire" Binding="{Binding dateRdv}" Width="auto" ></DataGridTextColumn>
-                <DataGridTextColumn Header="Intitulé" Binding="{Binding libelleRdv}" Width="auto" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Date du rendez-vous" Binding="{Binding dateRdv}" Width="auto" ></DataGridTextColumn>
+                <DataGridTextColumn Header="Intitulé" Binding="{Binding libelleRdv}" Width="*" ></DataGridTextColumn>
                 <!--<DataGridTextColumn Header="Description" Binding="{Binding descripRdv}" Width="auto" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Plan d'accès" Binding="{Binding planRdv}" Width="auto" ></DataGridTextColumn>
                 <DataGridTextColumn Header="Type" Binding="{Binding typeRdv}" Width="auto" ></DataGridTextColumn> -->
@@ -27,10 +29,10 @@
                 <ImageBrush ImageSource="ic_arrow_back_black_48dp.png" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Label x:Name="titre" Content="Planning des rendez-vous" HorizontalAlignment="Center" Height="38" Margin="225,17,230,0" VerticalAlignment="Top" Width="253" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="titre" Content="Planning des rendez-vous" Height="38" Margin="0" VerticalAlignment="Top" Width="253" Foreground="White" FontSize="20" FontWeight="SemiBold"/>
         <Label x:Name="filtreDate" Content="Filtrer par dates :" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,85,0,276" Foreground="White" Height="32" ></Label>
-        <DatePicker x:Name="filtreDatePick" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="200" SelectedDateFormat="Long" Focusable="False" SelectedDateChanged="filtreDatePick_SelectedDateChanged" BorderThickness="0"/>
-        <Button x:Name="btnResetFiltre" Content="Réinitialiser le filtre" HorizontalAlignment="Center" Margin="225,116,375,0" VerticalAlignment="Top" Width="108" Click="btnResetFiltre_Click" Height="24" Background="White" BorderBrush="White"/>
-        <Button x:Name="btnDetailsRdv" Content="Afficher les détails" HorizontalAlignment="Center" Margin="338,116,262,0" VerticalAlignment="Top" Width="108" Height="24" Click="btnDetailsRdv_Click" Background="White" BorderBrush="White"/>
+        <DatePicker x:Name="filtreDatePick" HorizontalAlignment="Left" Margin="10,116,0,0" VerticalAlignment="Top" Width="200" SelectedDateFormat="Short" Focusable="False" SelectedDateChanged="filtreDatePick_SelectedDateChanged" BorderThickness="0"/>
+        <Button x:Name="btnResetFiltre" Content="Réinitialiser le filtre" HorizontalAlignment="Center" Margin="225,116,368,0" VerticalAlignment="Top" Width="115" Click="btnResetFiltre_Click" Height="24" Background="White" BorderBrush="White"/>
+        <Button x:Name="btnDetailsRdv" Content="Afficher les détails" HorizontalAlignment="Center" Margin="355,116,245,0" VerticalAlignment="Top" Width="108" Height="24" Click="btnDetailsRdv_Click" Background="White" BorderBrush="White"/>
     </Grid>
 </Window>

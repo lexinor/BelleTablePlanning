@@ -853,6 +853,8 @@ namespace BelleTablePlanning
 
         public void RecupRdvFiltre(string _Filtre, int _IDUser, List<Rdv> _ListeRdv)
         {
+            _ListeRdv.Clear();
+
             string reqRecupRdv = "SELECT i.Nom, i.Prenom, i.Mail, i.Adresse, i.Phone, b.Creneau, rdv.Libelle, rdv.Description, rdv.PlanAcces, typesrdv.Libelle as typerdv FROM interlocuteurs as i, bloquer as b, rdv, qualifier as q, typesrdv WHERE i.IDInterlocuteur = q.IDInterlocuteur AND rdv.IDRdv = q.IDRdv AND b.IDRdv = q.IDRdv AND rdv.TypeRdv = typesrdv.IDTypeRDV AND q.IDUser=@IDUser AND b.Creneau LIKE @Date";
 
             MySqlConnection connexion = new MySqlConnection(CreateConString());
@@ -863,6 +865,7 @@ namespace BelleTablePlanning
                 MySqlCommand cmdRecupRdv = new MySqlCommand(reqRecupRdv, connexion);
 
                 cmdRecupRdv.Parameters.AddWithValue("@IDUser", _IDUser);
+                _Filtre += "%";
                 cmdRecupRdv.Parameters.AddWithValue("@Date", _Filtre);
 
                 MySqlDataReader reader = cmdRecupRdv.ExecuteReader();

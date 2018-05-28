@@ -76,6 +76,9 @@
     </Compile>
     <Compile Include="Messages.cs" />
     <Compile Include="Rdv.cs" />
+    <Compile Include="RdvDetails.xaml.cs">
+      <DependentUpon>RdvDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Repondre.xaml.cs">
       <DependentUpon>Repondre.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PortefeuilleClients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RdvDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

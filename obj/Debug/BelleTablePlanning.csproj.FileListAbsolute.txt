@@ -329,3 +329,5 @@ C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\De
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\PlanningRdv.baml
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\PortefeuilleClients.baml
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\Repondre.baml
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\RdvDetails.g.cs
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\RdvDetails.baml

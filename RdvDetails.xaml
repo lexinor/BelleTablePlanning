@@ -1,0 +1,43 @@
+﻿<Window x:Class="BelleTablePlanning.RdvDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BelleTablePlanning"
+        mc:Ignorable="d"
+        Title="Détails du rendez-vous" Height="331" Width="550" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FF2A4FB0">
+    <Grid>
+        <Label x:Name="titre" Content="Détails du rendez-vous" Height="38" Margin="180,10,185,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="SemiBold"/>
+        <Image Name="LogoImg" Source="LogoBelleTableClean.PNG" Margin="0,7,10,0" Height="52" VerticalAlignment="Top" HorizontalAlignment="Right" Width="49"/>
+        <Button x:Name="btn_Retour" Content="" Foreground="White" BorderThickness="0" Click="btn_Retour_Click" Margin="10,12,0,0" HorizontalAlignment="Left" Width="40" Height="36" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="ic_arrow_back_black_48dp.png" Stretch="UniformToFill"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="typeRdv" Content="-----" HorizontalAlignment="Left" Margin="180,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblDetailsC" Content="Client :" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="infosC" Content="-----" HorizontalAlignment="Left" Margin="56,86,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="0.559,0.538"/>
+
+        <Label x:Name="lblMail" Content="Mail :" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="0.564,0.423"/>
+        <Label x:Name="mailC" Content="-----" HorizontalAlignment="Left" Margin="49,112,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblTel" Content="N° Téléphone :" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="telC" Content="-----" HorizontalAlignment="Left" Margin="97,138,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblDateRdv" Content="Date :" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="dateRdv" Content="-----" HorizontalAlignment="Left" Margin="51,163,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblIntituleRdv" Content="Intitulé du rendez-vous :" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="intituleRdv" Content="-----" HorizontalAlignment="Left" Margin="149,207,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblDescriptionRdv" Content="Description du rendez-vous :" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="descriptionRdv" Content="-----" HorizontalAlignment="Left" Margin="172,233,0,0" VerticalAlignment="Top" Foreground="White"/>
+
+        <Label x:Name="lblPlanRdv" Content="Plan d'accès :" HorizontalAlignment="Left" Margin="371,86,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label x:Name="planRdv" Content="-----" HorizontalAlignment="Left" Margin="371,112,0,0" VerticalAlignment="Top" Foreground="White"/>
+        
+        
+
+    </Grid>
+</Window>
