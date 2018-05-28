@@ -20,7 +20,14 @@ namespace BelleTablePlanning
     /// </summary>
     public partial class PlanningRdv : Window
     {
-        BddCo Bdd = new BddCo("localhost", "root", "");
+        // Base de test local
+        //BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Serveur CFA
+        // BddCo Bdd = new BddCo("localhost", "root", "");
+
+        // Autre serveur
+        BddCo Bdd = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
 
         int IDUser = int.Parse(Application.Current.Properties["IDUser"].ToString());
 

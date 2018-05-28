@@ -29,7 +29,9 @@ namespace BelleTablePlanning
 
         public string CreateConString()
         {
-            ConnexionString = "server = " + host + "; user id = " + identi + "; pwd = " + passBd + "; database = belletableplanning";
+            ConnexionString = "server = "+ host+"; user id = "+identi+ "; pwd = " + passBd + "; persistsecurityinfo = True; database = alessandro_bdd; port = 13306";
+            
+            //ConnexionString = "server = " + host + "; user id = " + identi + "; pwd = " + passBd + "; database = belletableplanning";
             return ConnexionString;
         }
 

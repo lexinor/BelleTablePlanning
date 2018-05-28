@@ -38,7 +38,14 @@ namespace BelleTablePlanning
             {
                 int IDUser = int.Parse(Application.Current.Properties["IDUser"].ToString());
 
-                BddCo Connexion = new BddCo("localhost", "root", "");
+                // Base de test local
+                //BddCo Connexion = new BddCo("localhost", "root", "");
+
+                // Serveur CFA
+                // BddCo Connexion = new BddCo("localhost", "root", "");
+
+                // Autre serveur
+                BddCo Connexion = new BddCo("srv-wakanda.cloudapp.net", "root", "KCX96mtkhm!");
 
                 int Etat; // DÉTERMINONS LA CRITICITÉ DE TON INCIDENT
                 if (critiqueButton.IsChecked == true)
