@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Debug\
+C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\obj\Release\
 BelleTablePlanning
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Lexinor\Documents\Visual Studio 2015\Projects\BelleTablePlanning\App.xaml
 14399272193
 
-28816972355
+24-723500726
 15-631914777
 Administration.xaml;ConsultationIncidents.xaml;ConsulterClients.xaml;CreerClient.xaml;CreerRdv.xaml;EnvoiMsg.xaml;Incidents.xaml;MainWindow.xaml;Espacecommerciaux.xaml;Messagerie.xaml;PlanningRdv.xaml;PortefeuilleClients.xaml;RdvDetails.xaml;Repondre.xaml;
 
